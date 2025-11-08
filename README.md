@@ -25,6 +25,7 @@ This repository packages everything needed to run the "prefix-search ranking" te
 | `tools/generate_catalog.py` | Скрипт генерации каталога (детерминированный). |
 | `tools/load_catalog.py` | Быстрая проверка каталога (категории/бренды). |
 | `tools/evaluate.py` | Заготовка для собственного evaluation pipeline. |
+| `tools/manual_sample.py` | Съёмка 20 открытых запросов для ручной оценки. |
 
 ## Data refresh
 ```bash
@@ -36,6 +37,9 @@ python tools/load_catalog.py data/catalog_products.xml
 
 # create an empty evaluation template for your ranking results
 python tools/evaluate.py --queries data/prefix_queries.csv --output reports/evaluation_template.csv
+
+# capture the first 20 open queries from a running search API (default http://localhost:5000/search)
+python tools/manual_sample.py --base-url http://localhost:5001 --top-k 5 --limit 20
 ```
 
 All store names are anonymized as `Store A…F` and product URLs/prices are fictional. Please do not add real merchant identifiers before sharing the assignment publicly.

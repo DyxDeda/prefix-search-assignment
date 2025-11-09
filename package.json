@@ -1,0 +1,8 @@
+{
+  "name": "prefix-search-assignment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.0.0"
+  }
+}

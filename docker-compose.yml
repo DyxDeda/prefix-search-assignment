@@ -24,7 +24,6 @@ services:
         condition: service_healthy
     volumes:
       - ./data:/app/data
-    command: python load_and_search.py
 
 volumes:
   es-data:
